@@ -1,0 +1,5 @@
+{
+    "database": {
+        "host": "localhost:27017/bookstoreDB?retryWrites=true&w=majority"
+    }
+}

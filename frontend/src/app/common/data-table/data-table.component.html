@@ -1,0 +1,27 @@
+<div class="card mb-4">
+  <div class="card-header">
+      <i class="fas fa-table me-1"></i>
+      DataTable Example {{data |async |json}}
+  </div>
+  <div class="card-body">
+
+    <table  class="table table-striped">
+      <thead>
+          <tr >
+              <th *ngFor="let col of tableColumns">{{col.title}}</th>
+
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item  of data |async">
+          <td *ngFor="let col of tableColumns">{{item[col.key]}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <tfoot>
+        <tr>
+          <th *ngFor="let col of tableColumns">{{col.title}}</th>
+        </tr>
+    </tfoot>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "_id": "fasfdasfasdffff541515",
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Firpo",
+      "email": "jf@gmail.com",
+      "address": "LA",
+      "active": true,
+      "role": "admin"
+    },
+    {
+      "_id": "fasfdasfasdffff541515",
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Firpo",
+      "email": "jf@gmail.com",
+      "address": "LA",
+      "active": true,
+      "role": "admin"
+    }
+  ],
+  "products": [
+    {
+      "_id": "fasfdasfasdffff541515",
+      "id": 1,
+      "name": "Joe",
+      "description": "Firpo",
+      "price": 100,
+      "active": true
+    }
+  ],
+  "orders": [
+    {
+      "_id": "fasfdasfasdffff541515",
+      "customer": "fasfdasfasdffff541515",
+      "products": [
+        "fasfdasfasdffff541515"
+      ],
+      "note": "Ez egy megjegyzés"
+    }
+  ]
+}
