@@ -25,6 +25,7 @@ import { AuthorNamePipe } from './pipe/author-name.pipe';
 import { CategoryEditComponent } from './page/category-edit/category-edit.component';
 import { AuthorEditComponent } from './page/author-edit/author-edit.component';
 import { BookEditComponent } from './page/book-edit/book-edit.component';
+import { OrdersComponent } from './page/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BookEditComponent } from './page/book-edit/book-edit.component';
     CategoryEditComponent,
     AuthorEditComponent,
     BookEditComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,

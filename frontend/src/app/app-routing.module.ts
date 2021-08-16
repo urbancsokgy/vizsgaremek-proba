@@ -1,3 +1,4 @@
+import { OrdersComponent } from './page/orders/orders.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthorEditComponent } from './page/author-edit/author-edit.component';
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersComponent,
+  },
+  {
+    path: 'orders',
+    component: OrdersComponent,
   },
   {
     path: 'categories',
