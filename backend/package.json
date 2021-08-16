@@ -4,7 +4,7 @@
   "description": "Bookstore API by Urbancsok Gyozo",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "node src/index.js",
     "test": "jest",
     "nodemon": "nodemon",
     "docker:build": "docker build -t bookstore-api:latest .",

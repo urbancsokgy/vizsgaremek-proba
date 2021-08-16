@@ -1,8 +1,8 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { registerLocaleData } from '@angular/common';
+import { registerLocaleData, CurrencyPipe } from '@angular/common';
 import localeHu from '@angular/common/locales/hu';
 
 registerLocaleData(localeHu);
@@ -63,8 +63,10 @@ import { UserNamePipe } from './pipe/user-name.pipe';
       useClass: JwtInterceptorInterceptor,
       multi: true
     },
+    {provide: DEFAULT_CURRENCY_CODE, useValue: 'Ft'},
     AuthorNamePipe,
-    UserNamePipe
+    UserNamePipe,
+    CurrencyPipe
   ],
   bootstrap: [AppComponent]
 })

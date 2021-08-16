@@ -8,6 +8,7 @@ import { UserNamePipe } from 'src/app/pipe/user-name.pipe';
 import { Order } from 'src/app/model/order';
 import { AuthService } from 'src/app/service/auth.service';
 import { BookService } from 'src/app/service/book.service';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-orders',
@@ -20,8 +21,8 @@ export class OrdersComponent implements OnInit {
     { title: "Book title", value: order => order.book.title  },
     { title: "Book author", value: order => this.authorNamePipe.transform(order.book.author, true)  },
     { title: "Amount", value: order => order.amount.toString()  },
-    { title: "Price", value: order => order.book.price.toString()  },
-    { title: "Total price", value: order => (order.amount*order.book.price).toString()  },
+    { title: "Price (Ft)", value: order =>this.currencyPipe.transform(order.book.price ,'HUF', 'symbol', '4.0-1') || ''  },
+    { title: "Total price (Ft)", value: order =>this.currencyPipe.transform(order.amount*order.book.price ,'HUF', 'symbol', '4.0-1') || ''  },
   ];
 
   list$ = this.orderService.getAll();
@@ -33,6 +34,7 @@ export class OrdersComponent implements OnInit {
     private authorNamePipe : AuthorNamePipe,
     private router: Router,
     private authService: AuthService,
+    private currencyPipe:CurrencyPipe
   ) { }
 
   get isAdmin(): boolean {
