@@ -6,9 +6,11 @@ info:
 servers:
   - url: http://localhost:3000
 paths:
-  /person:
+  /api/users:
     get:
-      description: Returns a list of persons
+      description: Returns a list of users
+      tags:
+        - Users
       security:
         - bearerAuth: []
       responses:
@@ -19,7 +21,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Person'
+                  $ref: '#/components/schemas/User'
         '500':
           description: Internal server error
           content:
@@ -27,7 +29,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     post:
-      description: Creates a new person
+      description: Creates a new User (register)
+      tags:
+        - Users
       security:
         - bearerAuth: []
       requestBody:
@@ -35,14 +39,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Person'
+              $ref: '#/components/schemas/User'
       responses:
         '201':
-          description: Person has been created successfully
+          description: Users has been created successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Person'
+                $ref: '#/components/schemas/User'
         '400':
           description: Invalid request
           content:
@@ -55,26 +59,34 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /person/{person_id}:
+  /api/users/{_id}:
     get:
-      description: Returns the person with the given ID
+      description: Returns the user with the given ID
+      tags:
+        - Users
       security:
         - bearerAuth: []
       parameters:
-        - name: person_id
+        - name: _id
           in: path
           required: true
           schema:
             type: string
       responses:
         '200':
-          description: Person data returned successfully
+          description: User data returned successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Person'
+                $ref: '#/components/schemas/User'
         '404':
-          description: Person with the give ID was not found
+          description: User with the give ID was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: User query Unauthorized
           content:
             application/json:
               schema:
@@ -86,22 +98,30 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     put:
-      description: Update a person
+      description: Update a User
+      tags:
+        - Users
       security:
         - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          required: true
+          schema:
+            type: string
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Person'
+              $ref: '#/components/schemas/User'
       responses:
         '201':
-          description: Person has been updated successfully
+          description: User has been updated successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Person'
+                $ref: '#/components/schemas/User'
         '400':
           description: Invalid request
           content:
@@ -114,18 +134,154 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /cars: 
+  /api/categories: 
     get:
-      description: Returns a list of cars
+      description: Returns a list of categories
+      tags:
+        - Category
+      security:
+        - bearerAuth: []
       responses:
         '200':
-          description: List of cars returned successfully
+          description: List of categories returned successfully
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Car'
+                  $ref: '#/components/schemas/Category'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      description: Creates a new category
+      tags:
+        - Category
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '201':
+          description: Category has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/categories/{_id}:
+    get:
+      description: Returns a category with the given ID
+      tags:
+        - Category
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Category data returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+        '404':
+          description: Category with the give ID was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      description: Update a Category
+      tags:
+        - Category
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '201':
+          description: Category has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a category
+      tags:
+        - Category
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Category has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Category based on id is doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         '500':
           description: Internal server error
           content:
@@ -139,12 +295,14 @@ components:
       scheme: bearer
       bearerFormat: JWT
   schemas:
-    Person:
+    User:
       type: object
       required:
         - first_name
         - last_name
         - email
+        - address
+        - role
       properties:
         first_name:
           type: string
@@ -152,36 +310,57 @@ components:
           type: string
         email:
           type: string
-        posts: 
-          type: array
+        role:
+          type: string
+        address: 
+          type: object
           items:
-            $ref: '#/components/schemas/Post'
-    Car:
-      type: object
-      required:
-        - model
-        - year
-        - maker
-      properties:
-        model:
-          type: string
-        year:
-          type: number
-        maker:
-          type: string
-    Post:
+            $ref: '#/components/schemas/Address'
+    Book:
       type: object
       required:
         - title
-        - body
+        - price
+        - quantity
+        - category
+        - author
       properties:
         title:
           type: string
-        body:
+        price:
+          type: number
+        quantity:
+          type: number
+        category:
           type: string
-        author:
+        author: 
           type: object
-          $ref: '#/components/schemas/Person'
+    Category:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+    Address:
+      type: object
+      required:
+        - country
+        - city
+        - street
+        - zip
+        - building
+      properties:
+        country:
+          type: string
+        city:
+          type: string
+        street:
+          type: string
+        zip:
+          type: number
+        building:
+          type: number
     Error:
       type: object
       required:

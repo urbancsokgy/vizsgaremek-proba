@@ -4,7 +4,7 @@ const { exec } = require('child_process');
 let run = false;
 chokidar.watch('./src').on('all', (event, path) => {
     if (run) {
-        exec(`docker restart frontend_api_vizsgaremek_demo`, (e, s) => {
+        exec(`docker restart bookstore_api`, (e, s) => {
             if (e) {
                 return console.error(e);
             }

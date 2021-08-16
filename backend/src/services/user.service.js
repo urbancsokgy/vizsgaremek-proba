@@ -1,14 +1,17 @@
-const User = require('../models/user.model');
+const Model = require('../models/user.model');
 
-exports.create = userData => {
-    const user = new User(userData);
-    return user.save();
-};
+exports.create = model => {
+  return Model.count({ email: model.email })
+    .then(existingWithThisEmail => {
+      if (existingWithThisEmail > 0) {
+        throw new Error('Email already used');
+      }
+    })
+    .then(() => model.save());
+}
+exports.count = () => Model.count();
+exports.findAll = () => Model.find().populate();
 
-exports.findAll = () => User.find().populate();
+exports.findOne = id => Model.findById(id).populate();
 
-exports.findOne = id => User.findById(id).populate();
-
-exports.update = (id, updateData) => User.findByIdAndUpdate(id, updateData, {new: true});
-
-exports.delete = id => User.findByIdAndRemove(id);
+exports.update = (id, updateData) => Model.findByIdAndUpdate(id, updateData, {new: true});

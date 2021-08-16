@@ -1,36 +1,44 @@
 import { Injectable } from '@angular/core';
-
-export interface ITableColumns{
-  title: string;
-  key: string;
-  hidden? : boolean;
-}
+import { get } from 'lodash';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
 
-  public readonly apiUrl: string = 'http://localhost:3000/';
-  userColumns:ITableColumns[]=[
-    { key: "_id", title:  '#', hidden: false},
-    { key: "firstName", title:  'First name', hidden: false},
-    { key: "lastName", title:  'Last name', hidden: false},
-    { key: "email", title:  'Email', hidden: false},
-    { key: "address", title:  'Adress', hidden: false},
-    { key: "active", title:  'Active', hidden: false}
-
-  ]
-  productColumns:ITableColumns[]=[
-    { key: "_id", title:  '#', hidden: false},
-    { key: "name", title:  'Name', hidden: false},
-    { key: "description", title:  'description', hidden: false},
-    { key: "price", title:  'price', hidden: false},
-    { key: "active", title:  'Active', hidden: false}
-
-  ]
-
+  public readonly backendUrl: string = 'http://127.0.0.1:3000';
+  public readonly apiUrl: string = `${this.backendUrl}/api`;
 
   constructor() { }
+
+  static activeOrInactiveSign(v: boolean): string {
+    const icon: string = v ? 'fa-check' : 'fa-ban';
+    return `<i class="fas ${icon}"></i>`;
+  }
+
+  // row.customer.name => (row, 'customer.name')
+  static getSubProperty(obj: any, ...keys: string[]): string | number | boolean | undefined {
+    return keys.map( key => get(obj, key) ).join(' ');
+  }
+
+  static sqlDate(jsTime: number): string | number | boolean | undefined {
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric'
+    };
+    return Intl.DateTimeFormat('hu', options).format(jsTime);
+  }
+
+  static curveLongString(
+    data: string,
+    start: number,
+    end: number,
+    curve: string = '...'
+  ): string {
+    return data.slice(start, end) + curve;
+  }
 
 }

@@ -4,29 +4,29 @@ const OrderSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true,
+        required: true
     },
-    products: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Product',
+    book: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Book',
+        required: true
     },
-    time: {
-        type: Date,
-        default: new Date(),
-    },
-    note: String,
+    amount: {
+        type: Number,
+        default: 1,
+        min: 1
+    }
 }, {
     timestamps: true
 });
 
-module.exports = mongoose.model('Order', OrderSchema);
+const Order = mongoose.model('Order', OrderSchema, 'orders');
+//----------------------
+Order.createCollection().then(function(collection) {
+    collection.name='orders'
+    console.log('Collection is created!');
+    console.log('Collection name!', collection.name);
+  });
+//---------------------
 
-/*
-export class Order {
-  _id: string = '';
-  user: User = new User();
-  products: Product[] = [];
-  time: Date = new Date();
-  note: string = '';
-}
-*/
+module.exports = Order;

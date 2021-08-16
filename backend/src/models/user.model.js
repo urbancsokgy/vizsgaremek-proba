@@ -1,18 +1,48 @@
 const mongoose = require('mongoose');
 
 const UserSchema = mongoose.Schema({
-    firstName: String,
-    lastName: String,
+    firstName: {
+        type: String,
+        required: true,
+    },
+    lastName: {
+        type: String,
+        required: true,
+    },
     email: {
         type: String,
         required: true,
     },
-    address: String,
-    active: Boolean,
-    role:  {
-        type: Number,
-        default: 0
-    }
+    address: {
+        country: {
+            type: String,
+            required: true,
+            default: 'Magyarország'
+        },
+        city:{
+            type: String,
+            required: true,
+            default: ''
+        },
+        street:{
+            type: String,
+            required: true,
+            default: ''
+        },
+        zip: {
+            type: Number,
+            required: true,
+        },
+        building: {
+            type: Number,
+            required: true,
+        },
+    },
+    role: {
+        type: String,
+        required: true,
+        default: 'user'
+    },
 }, {
     timestamps: true
 });
@@ -20,17 +50,12 @@ const UserSchema = mongoose.Schema({
 // automatically adds { password: String }
 UserSchema.plugin(require('mongoose-bcrypt'));
 
-module.exports = mongoose.model('User', UserSchema);
-
-/*
-export class User {
-  _id: string = '';
-  firstName?: string = '';
-  lastName?: string = '';
-  email?: string = '';
-  address?: string = '';
-  active?: boolean = true;
-  password?: string = '';
-  accessToken?: string = '';
-}
-*/
+const User = mongoose.model('User', UserSchema, 'users');
+// ----------------------
+// User.createCollection().then(function(collection) {
+//     collection.name='users'
+//     console.log('Collection is created!');
+//     console.log('Collection name!', collection.name);
+//   });
+//---------------------
+module.exports = User;

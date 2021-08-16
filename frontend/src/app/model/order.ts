@@ -1,10 +1,14 @@
-import { Product } from "./product";
 import { User } from "./user";
+import { Book } from "./book";
 
-export class Order {
-  _id: string = '';
-  customer: User = new User();
-  products: Product[] = [];
-  time: Date = new Date();
-  note: string = '';
+interface OrderData {
+ amount: number;
 }
+
+export interface Order extends OrderData {
+  _id: string;
+  user: User;
+  book: Book;
+}
+
+

@@ -1,0 +1,30 @@
+Model
+
+- category { _id, name }
+- author { _id, first_name, last_name, born }
+- book { _id, title, description, price, quantity, category_id, author_id }
+
+- user { _id, first_name, last_name, email, (password <- mongoose-bcrypt), address, role }
+- order { _id, user_id, book_id, amount }
+
+-------------------------------
+Pages
+
+- Categories
+	- list
+	- edit/create/delete -> admin
+- Authors
+	- list
+	- edit/create/delete -> admin
+- Books
+	- list
+	- edit/create/delete -> admin
+- Users
+	- list -> admin
+	- View/Edit Profile -> self
+	- Register
+- Orders
+	- list -> admin?
+
+- Login
+- Logout

@@ -27,15 +27,13 @@ module.exports.login = async (req, res) => {
         }
 
         const accessToken = jwt.sign({
-            email: user.email,
-            role: user.role
+            email: user.email
         }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: process.env.TOKEN_EXPIRY
         });
 
         const refreshToken = jwt.sign({
-            email: user.email,
-            role: user.role
+            email: user.email
         }, process.env.REFRESH_TOKEN_SECRET);
         refreshTokens.push(refreshToken);
 
@@ -46,7 +44,7 @@ module.exports.login = async (req, res) => {
         });
 
     } catch(e) {
-        res.send('Username or password incorrect.');
+        res.sendStatus(401);
     }
 
 };
@@ -70,8 +68,7 @@ module.exports.refresh = (req, res, next) => {
         }
 
         const accessToken = jwt.sign({
-            username: user.username,
-            role: user.role
+            ...user
         }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: process.env.TOKEN_EXPIRY
         });

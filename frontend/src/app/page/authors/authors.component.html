@@ -1,0 +1,11 @@
+<div class="container px-4">
+  <app-data-table
+    title="Author List"
+    [editAvailable]="isAdmin"
+    [deleteAvailable]="isAdmin"
+    [tableColumns]="tableColumns"
+    [list$]="list$"
+    (edit)="edit($event)"
+    (delete)="delete($event)">
+  </app-data-table>
+</div>

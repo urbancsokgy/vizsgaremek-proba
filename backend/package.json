@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "jest",
+    "nodemon": "nodemon",
     "docker:build": "docker build -t bookstore-api:latest .",
     "docker-compose:up": "docker-compose up",
     "dev": "concurrently --kill-others \"docker-compose up\" \"node watcher.js\""
@@ -13,7 +14,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "chokidar": "^3.5.2",
-    "config": "^3.3.6",
     "dotenv": "^9.0.2",
     "express": "4.17.1",
     "http-errors": "^1.8.0",

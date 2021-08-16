@@ -1,7 +1,7 @@
 version: "3"
 services: 
     app:
-        container_name: bookstore_api
+        container_name: bookstore_api_test
         build: 
             dockerfile: Dockerfile
             context: .
@@ -9,11 +9,4 @@ services:
             - .:/app
         ports: 
             - "3000:3000"
-        links: 
-            - mongo
-    mongo:
-        image: mongo:latest
-        volumes: 
-            - ./data/db:/data/db
-        ports: 
-            - "27017:27017"
+        

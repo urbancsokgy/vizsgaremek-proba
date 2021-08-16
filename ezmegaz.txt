@@ -1,0 +1,77 @@
+Postman user post:
+http://localhost:3000/api/users
+{
+     "firstName": "Endre",
+    "lastName": "Példa",
+    "email": "peldaendre@gmail.com",
+    "address":{
+       "city": "Szentes",
+       "street": "Lavotta",
+        "building": 23,
+        "zip": 6600
+    },
+    "password": "example",
+    "role": "admin"
+}
+// vagy
+{
+     "firstName": "User",
+    "lastName": "Admin",
+    "email": "adminuser@gmail.com",
+    "address":{
+       "city": "Szentes",
+       "street": "Kossuth",
+        "building": 23,
+        "zip": 6600
+    },
+    "password": "admin",
+    "role": "admin"
+}
+--------------------------------------
+// Users class
+export class User{
+  _id: string = '';
+  firstName: string = '';
+  lastName: string = '';
+  emailName: string = '';
+  address: {
+    country: string ='Magyarország';
+    city : string = '';
+    street : string = '';
+    zip : number =0;
+    building : number =0;
+  }
+  role: string ='user';
+}
+
+//Author class
+export class Author{
+  _id: string = '';
+  firstName: string = '';
+  lastName: string = '';
+  born: date = new Date();  
+}
+//Book  class
+export class Book{
+  _id: string = '';
+  title: string = '';
+  description: string = '';
+  price: number = 0;
+  quantity: number = 0;
+  category_id: string = '';  
+  author_id: string = '';  
+}
+
+//Category  class
+export class Category{
+  _id: string = '';
+  name: string = '';
+}
+
+//Order  class
+export class Order{
+  _id: string = '';
+  user_id: string = '';
+  book_id: string = '';
+  amount: number = 0;  
+}

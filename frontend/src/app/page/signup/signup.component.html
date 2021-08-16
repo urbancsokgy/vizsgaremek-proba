@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 mt-5 px-5 px-md-0 form-container">
+      <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+        <p class="fw-bold">Login Information</p>
+        <div class="mb-2">
+          <label class="form-label">Email</label>
+          <input type="email" formControlName="email" class="form-control" [class.is-invalid]="f.email.invalid">
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control" [class.is-invalid]="f.password.invalid">
+          <div *ngIf="f.password.errors?.minlength" class="invalid-feedback">Enter at least {{ f.password.errors?.minlength.requiredLength }} characters.</div>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" formControlName="confirmPassword" class="form-control" [class.is-invalid]="f.confirmPassword.invalid">
+          <div *ngIf="f.confirmPassword.errors?.mismatch" class="invalid-feedback">Passwords must match.</div>
+        </div>
+        <p class="fw-bold mt-4">Personal Information</p>
+        <div class="mb-2 row">
+          <div class="col-12 col-lg-6">
+            <label class="form-label">First Name</label>
+            <input type="text" formControlName="firstName" class="form-control" [class.is-invalid]="f.firstName.invalid">
+          </div>
+          <div class="col-12 col-lg-6">
+            <label class="form-label">Last Name</label>
+            <input type="text" formControlName="lastName" class="form-control" [class.is-invalid]="f.lastName.invalid">
+          </div>
+        </div>
+        <ng-container formGroupName="address">
+          <div class="mb-2">
+            <label class="form-label">Country</label>
+            <input type="text" formControlName="country" class="form-control" readonly [class.is-invalid]="addressGroup.country.invalid">
+          </div>
+          <div class="row mb-2">
+            <div class="col-12 col-md-4">
+              <label class="form-label">Zip</label>
+              <input type="text" formControlName="zip" class="form-control" [class.is-invalid]="addressGroup.zip.invalid">
+            </div>
+            <div class="col-12 col-md-8">
+              <label class="form-label">City</label>
+              <input type="text" formControlName="city" class="form-control" [class.is-invalid]="addressGroup.city.invalid">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-9">
+              <label class="form-label">Street</label>
+              <input type="text" formControlName="street" class="form-control" [class.is-invalid]="addressGroup.street.invalid">
+            </div>
+            <div class="col-12 col-md-3">
+              <label class="form-label">Building</label>
+              <input type="text" formControlName="building" class="form-control" [class.is-invalid]="addressGroup.building.invalid">
+            </div>
+          </div>
+        </ng-container>
+        <button type="submit" class="btn btn-primary col-12 mt-5" [disabled]="signUpForm.invalid">
+          <i class="fas fa-save"></i>
+        </button>
+        <p class="alert alert-danger mt-3" *ngIf="error">{{ error }}</p>
+      </form>
+    </div>
+  </div>
+</div>

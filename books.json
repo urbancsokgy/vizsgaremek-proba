@@ -1,0 +1,47 @@
+[{
+  "_id": {
+    "$oid": "61153b323d8bf9001430231e"
+  },
+  "quantity": 2,
+  "category": [
+    {
+      "$oid": "6114ee6d8c9af9d5c40845d6"
+    }
+  ],
+  "author": [
+    {
+      "$oid": "6114f49e8c9af9d5c40845f2"
+    }
+  ],
+  "title": "A kismalac és a detektívek",
+  "description": "A kismalac és a detektívek leírása",
+  "price": 2500,
+  "createdAt": {
+    "$date": "2021-08-12T15:16:02.215Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-12T15:16:02.215Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "611554d3670a630015410a56"
+  },
+  "quantity": 1,
+  "title": "A három nővér",
+  "description": "A khárom nővér leírása",
+  "price": 6400,
+  "category": {
+    "$oid": "6114ee6d8c9af9d5c40845de"
+  },
+  "author": {
+    "$oid": "6114f49e8c9af9d5c40845f1"
+  },
+  "createdAt": {
+    "$date": "2021-08-12T17:05:23.923Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-12T17:05:23.923Z"
+  },
+  "__v": 0
+}]

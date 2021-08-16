@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div *ngIf="(category$ | async) as category" class="col-12 col-md-6 col-xl-4 mt-5">
+      <form #categoryForm="ngForm" (ngSubmit)="onSave(category)">
+        <div>
+          <label class="form-label">Name</label>
+          <input [(ngModel)]="category.name" name="name" type="text" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary col-12 mt-4" [disabled]="categoryForm.form.invalid">
+          <i class="fas fa-save"></i>
+        </button>
+        <p class="alert alert-danger mt-3" *ngIf="error">{{ error }}</p>
+      </form>
+    </div>
+  </div>
+</div>

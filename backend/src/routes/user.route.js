@@ -1,30 +1,13 @@
-const express = require("express");
+const router = require("express").Router();
+const restricted = require('../auth/authenticate');
+const adminOnly = require('../auth/adminOnly');
+const selfOnly = require('../auth/selfOnly');
 const controller = require('../controllers/user.controller');
 
-const router = express.Router();
-
-// create
-router.post('/', (req, res, next) => {
-  return controller.create(req, res, next);
-});
-
-// read
-router.get('/', (req, res, next) => {
-  return controller.findAll(req, res, next);
-});
-
-router.get('/:id', (req, res, next) => {
-  return controller.findOne(req, res, next);
-});
-
-// update
-router.put('/:id', (req, res, next) => {
-  return controller.update(req, res, next);
-});
-
-// delete
-router.delete('/:id', (req, res, next) => {
-  return controller.delete(req, res, next);
-});
+router.post('/', controller.register);
+router.get('/count', restricted, controller.count);
+router.get('/', restricted, adminOnly, controller.findAll);
+router.get('/:id', restricted, selfOnly, controller.findOne);
+router.put('/:id', restricted, selfOnly, controller.update);
 
 module.exports = router;

@@ -1,0 +1,743 @@
+[{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f1"
+  },
+  "firstName": "Acsai",
+  "lastName": "Roland",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f2"
+  },
+  "firstName": "Arany",
+  "lastName": "János",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f3"
+  },
+  "firstName": "Arany",
+  "lastName": "László",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f4"
+  },
+  "firstName": "Áprily",
+  "lastName": "Lajos",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f5"
+  },
+  "firstName": "Babits",
+  "lastName": "Mihály",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f6"
+  },
+  "firstName": "Balassi",
+  "lastName": "Bálint",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f7"
+  },
+  "firstName": "Balázs",
+  "lastName": "Béla",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f8"
+  },
+  "firstName": "Balla",
+  "lastName": "Zsófia",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845f9"
+  },
+  "firstName": "Baróti",
+  "lastName": "Szabó",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845fa"
+  },
+  "firstName": "Bartis",
+  "lastName": "Attila",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845fb"
+  },
+  "firstName": "Batsányi",
+  "lastName": "János",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845fc"
+  },
+  "firstName": "Bálint",
+  "lastName": "Ágnes",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845fd"
+  },
+  "firstName": "Bán",
+  "lastName": "Zsófia",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845fe"
+  },
+  "firstName": "Berzeviczy",
+  "lastName": "Gergely",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c40845ff"
+  },
+  "firstName": "Berzsenyi",
+  "lastName": "Dániel",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084600"
+  },
+  "firstName": "Bessenyei",
+  "lastName": "György",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084601"
+  },
+  "firstName": "Békés",
+  "lastName": "Pál",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084602"
+  },
+  "firstName": "Bodor",
+  "lastName": "Ádám",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084603"
+  },
+  "firstName": "Boldizsár",
+  "lastName": "Ildikó",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084604"
+  },
+  "firstName": "Bródy",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084605"
+  },
+  "firstName": "Csokonai",
+  "lastName": "Vitéz",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084606"
+  },
+  "firstName": "Csokonai",
+  "lastName": "Lilla",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084607"
+  },
+  "firstName": "Csoóri",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084608"
+  },
+  "firstName": "Csukás",
+  "lastName": "István",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084609"
+  },
+  "firstName": "Dénes",
+  "lastName": "Zsófia",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408460a"
+  },
+  "firstName": "Esze",
+  "lastName": "Dóra",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408460b"
+  },
+  "firstName": "Esterházy",
+  "lastName": "Péter",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408460c"
+  },
+  "firstName": "Faludy",
+  "lastName": "György",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408460d"
+  },
+  "firstName": "Fazekas",
+  "lastName": "Mihály",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408460e"
+  },
+  "firstName": "Fáy",
+  "lastName": "András",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408460f"
+  },
+  "firstName": "Fehér",
+  "lastName": "Klára",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084610"
+  },
+  "firstName": "Fekete",
+  "lastName": "István",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084611"
+  },
+  "firstName": "Ferencz",
+  "lastName": "Győző",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084612"
+  },
+  "firstName": "Fésűs",
+  "lastName": "Éva",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084613"
+  },
+  "firstName": "Fodor",
+  "lastName": "Ákos",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084614"
+  },
+  "firstName": "Galgóczi",
+  "lastName": "Erzsébet",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084615"
+  },
+  "firstName": "Grecsó",
+  "lastName": "Krisztián",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084616"
+  },
+  "firstName": "Gulácsy",
+  "lastName": "Irén",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084617"
+  },
+  "firstName": "Gyulai",
+  "lastName": "Pál",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084618"
+  },
+  "firstName": "Gyurkovics",
+  "lastName": "Tibor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084619"
+  },
+  "firstName": "Hajnal",
+  "lastName": "Anna",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408461a"
+  },
+  "firstName": "Hamvas",
+  "lastName": "Béla",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408461b"
+  },
+  "firstName": "Határ",
+  "lastName": "Győző",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408461c"
+  },
+  "firstName": "Janikovszky",
+  "lastName": "Éva",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408461d"
+  },
+  "firstName": "József",
+  "lastName": "Attila",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408461e"
+  },
+  "firstName": "Kaffka",
+  "lastName": "Margit",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408461f"
+  },
+  "firstName": "Karafiáth",
+  "lastName": "Orsolya",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084620"
+  },
+  "firstName": "Kassák",
+  "lastName": "Lajos",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084621"
+  },
+  "firstName": "Katona",
+  "lastName": "József",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084622"
+  },
+  "firstName": "Kányádi",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084623"
+  },
+  "firstName": "Kazinczy",
+  "lastName": "Ferenc",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084624"
+  },
+  "firstName": "Kertész",
+  "lastName": "Imre",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084625"
+  },
+  "firstName": "Kisfaludy",
+  "lastName": "Károly",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084626"
+  },
+  "firstName": "Kisfaludy",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084627"
+  },
+  "firstName": "Kiss",
+  "lastName": "Anna",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084628"
+  },
+  "firstName": "Kiss",
+  "lastName": "Judit",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084629"
+  },
+  "firstName": "Kiss",
+  "lastName": "Noémi",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408462a"
+  },
+  "firstName": "Kodolányi",
+  "lastName": "János",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408462b"
+  },
+  "firstName": "Kölcsey",
+  "lastName": "Ferenc",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408462c"
+  },
+  "firstName": "Konrád",
+  "lastName": "György",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408462d"
+  },
+  "firstName": "Kormos",
+  "lastName": "István",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408462e"
+  },
+  "firstName": "Kornis",
+  "lastName": "Mihály",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408462f"
+  },
+  "firstName": "Kuliffay",
+  "lastName": "Hanna",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084630"
+  },
+  "firstName": "Lesznai",
+  "lastName": "Anna",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084631"
+  },
+  "firstName": "Madách",
+  "lastName": "Imre",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084632"
+  },
+  "firstName": "Marék",
+  "lastName": "Veronika",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084633"
+  },
+  "firstName": "Márai",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084634"
+  },
+  "firstName": "Moldova",
+  "lastName": "György",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084635"
+  },
+  "firstName": "Molnár",
+  "lastName": "Ferenc",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084636"
+  },
+  "firstName": "Móra",
+  "lastName": "Ferenc",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084637"
+  },
+  "firstName": "Müller",
+  "lastName": "Péter",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084638"
+  },
+  "firstName": "Nádas",
+  "lastName": "Péter",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084639"
+  },
+  "firstName": "Nemes",
+  "lastName": "Nagy",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408463a"
+  },
+  "firstName": "Németh",
+  "lastName": "László",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408463b"
+  },
+  "firstName": "Oravecz",
+  "lastName": "Imre",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408463c"
+  },
+  "firstName": "Örkény",
+  "lastName": "István",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408463d"
+  },
+  "firstName": "Petri",
+  "lastName": "György",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408463e"
+  },
+  "firstName": "Petőfi",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408463f"
+  },
+  "firstName": "Pilinszky",
+  "lastName": "János",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084640"
+  },
+  "firstName": "Popper",
+  "lastName": "Péter",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084641"
+  },
+  "firstName": "Radnóti",
+  "lastName": "Miklós",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084642"
+  },
+  "firstName": "Rakovszky",
+  "lastName": "Zsuzsa",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084643"
+  },
+  "firstName": "Rapai",
+  "lastName": "Ágnes",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084644"
+  },
+  "firstName": "Reményik",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084645"
+  },
+  "firstName": "Romhányi",
+  "lastName": "József",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084646"
+  },
+  "firstName": "Sánta",
+  "lastName": "Ferenc",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084647"
+  },
+  "firstName": "Sebeők",
+  "lastName": "János",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084648"
+  },
+  "firstName": "Sütő",
+  "lastName": "András",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084649"
+  },
+  "firstName": "Szenes",
+  "lastName": "Anikó",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408464a"
+  },
+  "firstName": "Szepes",
+  "lastName": "Mária",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408464b"
+  },
+  "firstName": "Székely",
+  "lastName": "János",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408464c"
+  },
+  "firstName": "Tompa",
+  "lastName": "Mihály",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408464d"
+  },
+  "firstName": "Tóth",
+  "lastName": "Eszter",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408464e"
+  },
+  "firstName": "Tóth",
+  "lastName": "Krisztina",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408464f"
+  },
+  "firstName": "Tömörkény",
+  "lastName": "István",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084650"
+  },
+  "firstName": "Turbuly",
+  "lastName": "Lilla",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084651"
+  },
+  "firstName": "Vajda",
+  "lastName": "János",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084652"
+  },
+  "firstName": "Vajda",
+  "lastName": "Péter",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084653"
+  },
+  "firstName": "Varró",
+  "lastName": "Dániel",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084654"
+  },
+  "firstName": "Vámos",
+  "lastName": "Miklós",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084655"
+  },
+  "firstName": "Veres",
+  "lastName": "Péter",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084656"
+  },
+  "firstName": "Vörösmarty",
+  "lastName": "Mihály",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084657"
+  },
+  "firstName": "Vörös",
+  "lastName": "Győző",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084658"
+  },
+  "firstName": "Weöres",
+  "lastName": "Sándor",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c4084659"
+  },
+  "firstName": "Zalka",
+  "lastName": "Máté",
+  "born": ""
+},{
+  "_id": {
+    "$oid": "6114f49e8c9af9d5c408465a"
+  },
+  "firstName": "Zelk",
+  "lastName": "Zoltán",
+  "born": ""
+}]

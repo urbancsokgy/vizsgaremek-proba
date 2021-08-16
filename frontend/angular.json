@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "bb53d560-f46b-49c7-bae6-bcf90d969972"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "frontend": {
+    "bookstore-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontend",
+            "outputPath": "../backend/public",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,15 +31,14 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/assets/demo/"
+              "src/assets"
             ],
             "styles": [
-              "./src/assets/css/styles.css"
+              "src/assets/css/styles.css",
+              "src/styles.scss"
             ],
             "scripts": [
-              "./src/assets/js/scripts.js",
-              "./src/assets/js/datatables-simple-demo.js"
+              "src/assets/js/scripts.js"
             ]
           },
           "configurations": {
@@ -76,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "frontend:build:production"
+              "browserTarget": "bookstore-frontend:build:production"
             },
             "development": {
-              "browserTarget": "frontend:build:development"
+              "browserTarget": "bookstore-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "frontend:build"
+            "browserTarget": "bookstore-frontend:build"
           }
         },
         "test": {
@@ -111,5 +113,5 @@
       }
     }
   },
-  "defaultProject": "frontend"
+  "defaultProject": "bookstore-frontend"
 }

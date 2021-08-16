@@ -1,44 +1,65 @@
-import { ConfigService } from './service/config.service';
-import { ProductService } from './service/product.service';
-import { UserService } from './service/user.service';
-import { OrderService } from './service/order.service';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { registerLocaleData } from '@angular/common';
+import localeHu from '@angular/common/locales/hu';
+
+registerLocaleData(localeHu);
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './component/users/users.component';
-import { ProductsComponent } from './component/products/products.component';
-import { OrdersComponent } from './component/orders/orders.component';
-import { NavComponent } from './component/nav/nav.component';
-import { HomeComponent } from './component/home/home.component';
-import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { NavigationComponent } from './common/navigation/navigation.component';
+import { SideNavComponent } from './common/side-nav/side-nav.component';
+import { UsersComponent } from './page/users/users.component';
 import { DataTableComponent } from './common/data-table/data-table.component';
+import { LoginComponent } from './page/login/login.component';
+import { JwtInterceptorInterceptor } from './service/jwt-interceptor.interceptor';
+import { NotFoundComponent } from './page/not-found/not-found.component';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { SignupComponent } from './page/signup/signup.component';
+import { CategoriesComponent } from './page/categories/categories.component';
+import { AuthorsComponent } from './page/authors/authors.component';
+import { BooksComponent } from './page/books/books.component';
+import { AuthorNamePipe } from './pipe/author-name.pipe';
+import { CategoryEditComponent } from './page/category-edit/category-edit.component';
+import { AuthorEditComponent } from './page/author-edit/author-edit.component';
+import { BookEditComponent } from './page/book-edit/book-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavigationComponent,
+    SideNavComponent,
     UsersComponent,
-    ProductsComponent,
-    OrdersComponent,
-    NavComponent,
-    HomeComponent,
-    SidebarComponent,
-    DataTableComponent
+    DataTableComponent,
+    LoginComponent,
+    NotFoundComponent,
+    DashboardComponent,
+    SignupComponent,
+    CategoriesComponent,
+    AuthorsComponent,
+    BooksComponent,
+    AuthorNamePipe,
+    CategoryEditComponent,
+    AuthorEditComponent,
+    BookEditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
   ],
   providers: [
-    OrderService,
-    UserService,
-    ProductService,
-    ConfigService
+    { provide: LOCALE_ID, useValue: 'hu-HU'},
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptorInterceptor,
+      multi: true
+    },
+    AuthorNamePipe
   ],
   bootstrap: [AppComponent]
 })
