@@ -2,11 +2,12 @@
   <!-- <button *ngIf="isAdmin" class="btn btn-primary" (click)="createNew()">Create New</button> -->
   <app-data-table
     title="Order List"
-    [editAvailable]="isAdmin"
+    [editAvailable]="false"
     [deleteAvailable]="isAdmin"
     [tableColumns]="tableColumns"
     [list$]="list$"
+    (delete)="delete($event)"
     >
   </app-data-table>
 </div>
-{{list$ |async |json}}
+<!-- {{list$ |async |json}} -->

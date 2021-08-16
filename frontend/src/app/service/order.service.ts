@@ -35,7 +35,7 @@ export class OrderService {
   //   return this.http.post<Order>(`${this.baseUrl}`, order);
   // }
 
-  // delete(id: string): Observable<void> {
-  //   return this.http.delete<void>(`${this.baseUrl}/${id}`);
-  // }
+   delete(id: string): Observable<void> {
+     return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  }
 }

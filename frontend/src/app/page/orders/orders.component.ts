@@ -20,9 +20,8 @@ export class OrdersComponent implements OnInit {
     { title: "Book title", value: order => order.book.title  },
     { title: "Book author", value: order => this.authorNamePipe.transform(order.book.author, true)  },
     { title: "Amount", value: order => order.amount.toString()  },
-    // { title: "Author", value: book => this.authorNamePipe.transform(book.author, true) },
-    // { title: "Price (Ft)", value: book => `${book.price} Ft` },
-    // { title: 'Quantity', value: book => book.quantity > 0 ? book.quantity.toString() : 'out of stock' },
+    { title: "Price", value: order => order.book.price.toString()  },
+    { title: "Total price", value: order => (order.amount*order.book.price).toString()  },
   ];
 
   list$ = this.orderService.getAll();
@@ -38,6 +37,14 @@ export class OrdersComponent implements OnInit {
 
   get isAdmin(): boolean {
     return this.authService.currentUser?.role === 'admin';
+  }
+  delete(order: Order): void {
+    if (!window.confirm('Are you sure you wish to delete this book?')) {
+      return;
+    }
+    this.orderService.delete(order._id).toPromise()
+      .then(() => this.list$ = this.orderService.getAll())
+      .catch(() => window.alert('Failed to delete book'));
   }
 
   ngOnInit(): void {
