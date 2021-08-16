@@ -1,6 +1,14 @@
 const Model = require('../models/order.model');
+const Book = require('../models/book.model');
+const Author = require('../models/author.model');
 
-const populatedFields = [ 'user', 'book' ];
+const populatedFields = [ 'user', 'book', {
+                path: 'book',
+                model: 'Book',
+                populate : {
+                    path: 'author',
+                    model: 'Author',  
+                }} ];
 
 exports.create = modelData => {
     const model = new Model(modelData);
@@ -8,6 +16,13 @@ exports.create = modelData => {
 };
 exports.count = () => Model.count();
 exports.findAll = () => Model.find().populate(populatedFields);
+//  exports.findAll = () => Model.find().populate({
+//             path: 'book',
+//             model: 'book',
+//             populate : {
+//                 path: 'author',
+//                 model: 'author',  
+//             }})
 
 exports.findOne = id => Model.findById(id).populate(populatedFields);
 

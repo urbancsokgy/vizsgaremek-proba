@@ -26,6 +26,7 @@ import { CategoryEditComponent } from './page/category-edit/category-edit.compon
 import { AuthorEditComponent } from './page/author-edit/author-edit.component';
 import { BookEditComponent } from './page/book-edit/book-edit.component';
 import { OrdersComponent } from './page/orders/orders.component';
+import { UserNamePipe } from './pipe/user-name.pipe';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { OrdersComponent } from './page/orders/orders.component';
     AuthorEditComponent,
     BookEditComponent,
     OrdersComponent,
+    UserNamePipe,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { OrdersComponent } from './page/orders/orders.component';
       useClass: JwtInterceptorInterceptor,
       multi: true
     },
-    AuthorNamePipe
+    AuthorNamePipe,
+    UserNamePipe
   ],
   bootstrap: [AppComponent]
 })

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IDataTableColumn } from 'src/app/common/data-table/data-table.component';
 import { Book } from 'src/app/model/book';
+import { AuthorNamePipe } from 'src/app/pipe/author-name.pipe';
+import { UserNamePipe } from 'src/app/pipe/user-name.pipe';
 import { Order } from 'src/app/model/order';
 import { AuthService } from 'src/app/service/auth.service';
 import { BookService } from 'src/app/service/book.service';
@@ -13,15 +15,30 @@ import { BookService } from 'src/app/service/book.service';
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
+  readonly tableColumns: IDataTableColumn<Order>[] = [
+    { title: "Customer name", value: order =>this.userNamePipe.transform (order.user) },
+    { title: "Book title", value: order => order.book.title  },
+    { title: "Book author", value: order => this.authorNamePipe.transform(order.book.author, true)  },
+    { title: "Amount", value: order => order.amount.toString()  },
+    // { title: "Author", value: book => this.authorNamePipe.transform(book.author, true) },
+    // { title: "Price (Ft)", value: book => `${book.price} Ft` },
+    // { title: 'Quantity', value: book => book.quantity > 0 ? book.quantity.toString() : 'out of stock' },
+  ];
 
   list$ = this.orderService.getAll();
 
   constructor(
     private orderService: OrderService,
     private bookService: BookService,
+    private userNamePipe: UserNamePipe,
+    private authorNamePipe : AuthorNamePipe,
     private router: Router,
     private authService: AuthService,
   ) { }
+
+  get isAdmin(): boolean {
+    return this.authService.currentUser?.role === 'admin';
+  }
 
   ngOnInit(): void {
   }
